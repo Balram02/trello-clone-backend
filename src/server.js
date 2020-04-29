@@ -1,9 +1,15 @@
 const { port } = require('../config');
 const helmet = require('helmet');
 const express = require('express');
-
+const db = require('../config/database');
 const app = express();
 
 app.use(helmet());
+db();
 
-console.info(`App is running on port ${port + 1}`);
+
+
+app.listen(port, () => {
+    console.info(`App is running on port ${port}`);
+    
+})
