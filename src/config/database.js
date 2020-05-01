@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 const chalk = require('chalk')
-const { db: db_url } = require('../config');
+const { db: db_url } = require('../../config');
 // console.log(db)
 
 const connected = chalk.bold.cyan;
